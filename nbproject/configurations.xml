@@ -13,6 +13,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>ListLoop.cpp</itemPath>
+      <itemPath>../CppSB2/SortStack.cpp</itemPath>
       <itemPath>../CppSB2/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -38,6 +39,8 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="../CppSB2/SortStack.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../CppSB2/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ListLoop.cpp" ex="false" tool="1" flavor2="0">
@@ -64,6 +67,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../CppSB2/SortStack.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../CppSB2/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ListLoop.cpp" ex="false" tool="1" flavor2="0">

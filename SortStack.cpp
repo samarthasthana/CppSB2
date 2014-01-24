@@ -117,7 +117,7 @@ else{ cout<<"The Stack is Empty \n";}
 
 }//eof
 
-int main(int argc, char** argv) {
+/*int main(int argc, char** argv) {
     Stack s1,s2;
     int num=0,size=0,i=0;
     cout<<"Enter the size of stack 1 \n";
@@ -131,5 +131,5 @@ int main(int argc, char** argv) {
     s1.displayStack();
     s1.sortArray(s2);
     return 0;
-}
+}*/
 
