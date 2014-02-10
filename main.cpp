@@ -25,11 +25,12 @@ additional space complexity = O(1) constant and does not scale
 long str2Long(string str){
 	long len= str.length(),i=0;
 	long num=0;
-        int ex=0;
+        int ex=0,lim=0,flag=0;
         long temp=0;
 	long zero=(long)'0';
 	i=len-1;
-	while(i>=0){
+        if(str[0]=='-'){lim=1;flag=1;}
+	while(i>=lim){
             temp=(long)str[i]-zero;  
             if((temp>=0 && temp <=9)){            
             num+=(temp* pow(10.0,ex));
@@ -38,9 +39,11 @@ long str2Long(string str){
 		i--;
             }//if 
             else{
-                return -1;
+                return INT_MAX;
             }
 	}
+        if(flag==1){return -num;}
+        else
 	return num;
 }
 
@@ -59,10 +62,10 @@ void test_str2Long(){
         cout<<"Test2 passed \n";
     }else
         cout<<"Test2 Failed value received ="<<val;
-    //testing negative numbers "-123" should give invalid input
+    //testing negative numbers "-123" should give correct answer
     str="-123";
     val=str2Long(str);
-    if(val==-1){
+    if(val==-123){
         cout<<"Test3 passed \n";
     }else
         cout<<"Test3 Failed value received ="<<val;
@@ -70,7 +73,7 @@ void test_str2Long(){
     //testing invalid inputs "abc"
     str="abc";
     val=str2Long(str);
-    if(val==-1){
+    if(val==INT_MAX){
         cout<<"Test4 passed \n";
     }else
         cout<<"Test4 Failed value received ="<<val;
@@ -79,6 +82,7 @@ void test_str2Long(){
 
 int main(int argc, char** argv) {
 
+    test_str2Long();
     return 0;
     
 }
