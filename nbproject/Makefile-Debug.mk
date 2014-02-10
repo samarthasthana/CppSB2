@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/2109343375/BinSearchMod.o \
 	${OBJECTDIR}/_ext/2109343375/Btree_2.o \
 	${OBJECTDIR}/_ext/2109343375/ReverseSent.o \
 	${OBJECTDIR}/_ext/2109343375/SortStack.o \
@@ -65,6 +66,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppsb2.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppsb2 ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/_ext/2109343375/BinSearchMod.o: ../CppSB2/BinSearchMod.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2109343375
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/2109343375/BinSearchMod.o ../CppSB2/BinSearchMod.cpp
 
 ${OBJECTDIR}/_ext/2109343375/Btree_2.o: ../CppSB2/Btree_2.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2109343375
